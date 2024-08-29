@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ft-facturacionelectronicaec:1.0.0
+    container_name: ft-facturacionelectronicaec
+    environment:
+      - APP_TIMEZONE=UTC
+      - JWT_SECRET=6BiImruH7x1McQPd9R1mIHZkWM8FYMoXappVi5OFBywtmDGqigOHb9c4ivsfVKYx
+    ports:
+      - "80:80"
+    volumes:
+      - ./:/app
